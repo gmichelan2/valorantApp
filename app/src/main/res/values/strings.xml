@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ValorantApp</string>
+    <string name="agent_item_name">Nombre del agente</string>
+    <string name="agents_button">Agents</string>
+    <string name="weapon_buttons">Weapons</string>
+    <string name="buddies_button">Buddies</string>
+    <string name="weapon_name">Vandal</string>
+</resources>
