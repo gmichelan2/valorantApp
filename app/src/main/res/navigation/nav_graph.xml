@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.valorantapp.ui.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/mainFragment_to_agentsFragment"
+            app:destination="@id/agentsFragment" />
+        <action
+            android:id="@+id/mainFragment_to_buddiesFragment"
+            app:destination="@id/buddiesFragment" />
+        <action
+            android:id="@+id/mainFragment_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agentsFragment"
+        android:name="com.example.valorantapp.ui.agents.AgentsFragment"
+        android:label="AgentsFragment"
+        tools:layout="@layout/agents_fragment"/>
+    <fragment
+        android:id="@+id/buddiesFragment"
+        android:name="com.example.valorantapp.ui.buddies.BuddiesFragment"
+        android:label="BuddiesFragment"
+        tools:layout="@layout/buddies_fragment"/>
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.example.valorantapp.ui.weapons.WeaponsFragment"
+        android:label="WeaponsFragment"
+        tools:layout="@layout/weapons_fragment"/>
+</navigation>

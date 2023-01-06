@@ -13,15 +13,15 @@ interface ValorantService {
      suspend fun getAgents(
         @Query("language") language: String,
         @Query("isPlayableCharacter") isPlayableCharacter: Boolean = true
-    ) : BaseData<List<Agent>>
+    ) : List<Agent>
 
      @GET("buddies")
      suspend fun getBuddies(
          @Query("language") language: String
-     ) : BaseData<List<Buddy>>
+     ) : List<Buddy>
 
      @GET("weapons")
      suspend fun getWeapons(
          @Query("language") language: String
-     ) : BaseData<List<Weapon>>
+     ) : List<Weapon>
 }
