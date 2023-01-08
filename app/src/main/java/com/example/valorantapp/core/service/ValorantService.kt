@@ -1,9 +1,6 @@
 package com.example.valorantapp.core.service
 
-import com.example.valorantapp.modules.Agent
-import com.example.valorantapp.modules.BaseData
-import com.example.valorantapp.modules.Buddy
-import com.example.valorantapp.modules.Weapon
+import com.example.valorantapp.modules.*
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -13,15 +10,15 @@ interface ValorantService {
      suspend fun getAgents(
         @Query("language") language: String,
         @Query("isPlayableCharacter") isPlayableCharacter: Boolean = true
-    ) : List<Agent>
+    ) : ValorantApiResponse<Agent>
 
      @GET("buddies")
      suspend fun getBuddies(
          @Query("language") language: String
-     ) : List<Buddy>
+     ) : ValorantApiResponse<Buddy>
 
      @GET("weapons")
      suspend fun getWeapons(
          @Query("language") language: String
-     ) : List<Weapon>
+     ) : ValorantApiResponse<Weapon>
 }
