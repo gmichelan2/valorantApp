@@ -1,4 +1,4 @@
-package com.example.valorantapp.modules
+package com.example.valorantapp.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -7,4 +7,5 @@ import kotlinx.parcelize.Parcelize
 data class Ability (
     val displayName: String,
     val description: String,
-    val displayIcon: String): Parcelable
+    val displayIcon: String
+    ):Parcelable

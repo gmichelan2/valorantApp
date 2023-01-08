@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardUseCompatPadding="true"
     app:cardElevation="2dp"
-    android:backgroundTint="@color/valorant_red"
-    android:padding="2dp">
+    android:backgroundTint="@color/valorant_red">
 
     <ImageView
         android:id="@+id/buddie_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="center"
+        android:layout_margin="3dp"
         />
 
 </com.google.android.material.card.MaterialCardView>

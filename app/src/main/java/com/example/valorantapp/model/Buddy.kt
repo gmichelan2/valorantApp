@@ -1,4 +1,4 @@
-package com.example.valorantapp.modules
+package com.example.valorantapp.model
 
 data class Buddy(
     val uuid: String,

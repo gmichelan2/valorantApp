@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import com.example.valorantapp.databinding.BuddieItemBinding
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.valorantapp.modules.Buddy
+import com.example.valorantapp.model.Buddy
 import com.example.valorantapp.tools.setHttpImage
 
 class BuddiesAdapter(
-    private val buddiesList: List<Buddy>
+    private var buddiesList: List<Buddy>
 ) : RecyclerView.Adapter<BuddiesAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
@@ -21,6 +21,11 @@ class BuddiesAdapter(
     }
 
     override fun getItemCount(): Int = buddiesList.size
+
+    fun setList(buddyList: List<Buddy>){
+        buddiesList = buddyList
+        this.notifyDataSetChanged()
+    }
 
     class ViewHolder(
         private val binding: BuddieItemBinding

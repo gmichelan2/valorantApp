@@ -5,4 +5,5 @@
     <string name="weapon_buttons">Weapons</string>
     <string name="buddies_button">Buddies</string>
     <string name="weapon_name">Vandal</string>
+    <string name="agent_description">Agent description</string>
 </resources>

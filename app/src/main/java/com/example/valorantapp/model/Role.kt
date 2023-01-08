@@ -1,4 +1,4 @@
-package com.example.valorantapp.modules
+package com.example.valorantapp.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -9,4 +9,4 @@ data class Role(
     val displayName: String,
     val description: String,
     val displayIcon: String
-    ): Parcelable
+    ):Parcelable

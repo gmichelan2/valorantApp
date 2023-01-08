@@ -16,5 +16,6 @@
     
     <style name="ValorantButtonTheme">
         <item name="cornerRadius">20dp</item>
+        <item name="marginHorizontal">16dp</item>
     </style>
 </resources>

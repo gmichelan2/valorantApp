@@ -5,27 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/valorant_gray"
+    android:paddingHorizontal="@dimen/common_margin"
     tools:context=".ui.MainFragment">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/agents_button"
+        style="@style/ValorantButtonTheme"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:text="@string/agents_button"
-        style="@style/ValorantButtonTheme"/>
+        app:layout_constraintBottom_toTopOf="@+id/weapons_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/weapons_button"
+        style="@style/ValorantButtonTheme"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/agents_button"
         android:text="@string/weapon_buttons"
-        style="@style/ValorantButtonTheme"/>
+        app:layout_constraintBottom_toTopOf="@+id/buddies_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agents_button" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buddies_button"
@@ -33,10 +39,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/buddies_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/weapons_button" />
+        app:layout_constraintTop_toBottomOf="@+id/weapons_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
