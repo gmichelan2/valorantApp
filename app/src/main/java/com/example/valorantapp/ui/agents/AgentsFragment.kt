@@ -20,7 +20,7 @@ class AgentsFragment : Fragment(R.layout.agents_fragment) {
 
     private var _binding: AgentsFragmentBinding? = null
     private val binding get() = _binding!!
-    private val agentAdapter: AgentsAdapter by lazy { AgentsAdapter(emptyList()) }
+    private val agentAdapter: AgentsAdapter by lazy { AgentsAdapter(emptyList()){mAgentsViewModel.onAgentClicked(it)} }
 
     private val mAgentsViewModel by viewModels<AgentsViewModel> {
         AgentsViewModelFactory(ValorantRepository())

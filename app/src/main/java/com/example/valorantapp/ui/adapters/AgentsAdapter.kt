@@ -8,7 +8,8 @@ import com.example.valorantapp.databinding.AgentsItemBinding
 import com.example.valorantapp.modules.Agent
 import com.example.valorantapp.tools.setHttpImage
 
-class AgentsAdapter(private var agentsList: List<Agent>
+class AgentsAdapter(private var agentsList: List<Agent>,
+                    private val listener: (Agent) -> Unit
                     ) : RecyclerView.Adapter<AgentsAdapter.AgentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgentViewHolder {
@@ -18,6 +19,7 @@ class AgentsAdapter(private var agentsList: List<Agent>
 
     override fun onBindViewHolder(holder: AgentViewHolder, position: Int) {
         holder.bind(agentsList[position])
+        holder.itemView.setOnClickListener { listener(agentsList[position]) }
     }
 
     override fun getItemCount(): Int = agentsList.size
