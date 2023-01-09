@@ -10,9 +10,9 @@ import com.example.valorantapp.modules.Weapon
 import kotlinx.coroutines.launch
 
 class WeaponsViewModel(private val valorantRepository: ValorantRepositoryInterface): ViewModel() {
-    private val _uiState = MutableLiveData(UIState<Weapon>())
+    private val _uiState = MutableLiveData(UIState<List<Weapon>, Weapon>())
 
-    val uiState: LiveData<UIState<Weapon>>
+    val uiState: LiveData<UIState<List<Weapon>, Weapon>>
         get() {
             if (_uiState.value?.dataList == null) {
                 loadScreen()
@@ -25,9 +25,5 @@ class WeaponsViewModel(private val valorantRepository: ValorantRepositoryInterfa
             _uiState.value = UIState(loading = true)
             _uiState.value = UIState(dataList = valorantRepository.getWeapons())
         }
-    }
-
-    fun onAgentClicked(weapon: Weapon) {
-        _uiState.value = uiState.value?.copy(navigateTo = weapon)
     }
 }

@@ -24,7 +24,11 @@
         android:id="@+id/agentsFragment"
         android:name="com.example.valorantapp.ui.agents.AgentsFragment"
         android:label="AgentsFragment"
-        tools:layout="@layout/agents_fragment"/>
+        tools:layout="@layout/agents_fragment">
+        <action
+            android:id="@+id/action_agentsFragment_to_agentDetailFragment"
+            app:destination="@id/agentDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/buddiesFragment"
         android:name="com.example.valorantapp.ui.buddies.BuddiesFragment"
@@ -35,4 +39,13 @@
         android:name="com.example.valorantapp.ui.weapons.WeaponsFragment"
         android:label="WeaponsFragment"
         tools:layout="@layout/weapons_fragment"/>
+    <fragment
+        android:id="@+id/agentDetailFragment"
+        android:name="com.example.valorantapp.ui.agentdetail.AgentDetailFragment"
+        android:label="AgentDetailFragment"
+        tools:layout="@layout/agent_detail_fragment">
+        <argument
+            android:name="agent"
+            app:argType="com.example.valorantapp.modules.Agent" />
+    </fragment>
 </navigation>

@@ -10,15 +10,20 @@ interface ValorantService {
      suspend fun getAgents(
         @Query("language") language: String,
         @Query("isPlayableCharacter") isPlayableCharacter: Boolean = true
-    ) : ValorantApiResponse<Agent>
+    ) : ValorantApiResponse<List<Agent>>
 
      @GET("buddies")
      suspend fun getBuddies(
          @Query("language") language: String
-     ) : ValorantApiResponse<Buddy>
+     ) : ValorantApiResponse<List<Buddy>>
 
      @GET("weapons")
      suspend fun getWeapons(
          @Query("language") language: String
-     ) : ValorantApiResponse<Weapon>
+     ) : ValorantApiResponse<List<Weapon>>
+
+     @GET("agent/{id}")
+     suspend fun getAgentById(
+         @Query("language") language: String,
+         uuid: String) : ValorantApiResponse<Agent>
 }

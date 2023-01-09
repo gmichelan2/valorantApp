@@ -11,9 +11,9 @@ import kotlinx.coroutines.launch
 
 class BuddiesViewModel(private val valorantRepository: ValorantRepositoryInterface) : ViewModel() {
 
-    private val _uiState = MutableLiveData(UIState<Buddy>())
+    private val _uiState = MutableLiveData(UIState<List<Buddy>, Buddy>())
 
-    val uiState: LiveData<UIState<Buddy>>
+    val uiState: LiveData<UIState<List<Buddy>, Buddy>>
         get() {
             if (_uiState.value?.dataList == null) {
                 loadScreen()
@@ -26,9 +26,5 @@ class BuddiesViewModel(private val valorantRepository: ValorantRepositoryInterfa
             _uiState.value = UIState(loading = true)
             _uiState.value = UIState(dataList = valorantRepository.getBuddies())
         }
-    }
-
-    fun onAgentClicked(buddy: Buddy) {
-        _uiState.value = uiState.value?.copy(navigateTo = buddy)
     }
 }

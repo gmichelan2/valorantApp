@@ -1,5 +1,9 @@
 package com.example.valorantapp.modules
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Agent(
     val uuid: String,
     val displayName: String,
@@ -11,4 +15,4 @@ data class Agent(
     val background: String,
     val role: Role,
     val abilities: List<Ability>,
-)
+): Parcelable
