@@ -8,7 +8,8 @@ import com.example.valorantapp.databinding.AgentsItemBinding
 import com.example.valorantapp.modules.Agent
 import com.example.valorantapp.tools.setHttpImage
 
-class AgentsAdapter(private var agentsList: List<Agent>) : RecyclerView.Adapter<AgentsAdapter.AgentViewHolder>() {
+class AgentsAdapter(private var agentsList: List<Agent>
+                    ) : RecyclerView.Adapter<AgentsAdapter.AgentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgentViewHolder {
         val binding = AgentsItemBinding.inflate(LayoutInflater.from(parent.context),parent, false )

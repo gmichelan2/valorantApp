@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valorantapp.R
 import com.example.valorantapp.core.repository.ValorantRepository
@@ -38,9 +39,12 @@ class AgentsFragment : Fragment(R.layout.agents_fragment) {
         mAgentsViewModel.uiState.observe(viewLifecycleOwner, this::updateUI)
     }
 
-    private fun updateUI(uiState: UIState<Agent>) {
+    private fun updateUI(uiState: UIState<List<Agent>,Agent>) {
         binding.agentsProgressbar.visibility = if (uiState.loading) View.VISIBLE else View.GONE
         uiState.dataList?.data?.let(agentAdapter::setList)
+        uiState.navigateTo?.let { agent ->
+            findNavController().navigate(AgentsFragmentDirections.actionAgentsFragmentToAgentDetailFragment(agent))
+        }
     }
 
     override fun onDestroyView() {

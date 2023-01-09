@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/common_min_margin">
+    android:padding="@dimen/common_min_margin"
+    android:background="@color/valorant_red">
 
     <ImageView
         android:id="@+id/ability_image"
@@ -17,6 +18,8 @@
         android:id="@+id/ability_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_marginHorizontal="@dimen/common_min_margin"
         app:layout_constraintStart_toEndOf="@id/ability_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ability_image"
@@ -25,8 +28,11 @@
         android:id="@+id/ability_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginHorizontal="@dimen/common_min_margin"
         app:layout_constraintTop_toBottomOf="@id/ability_title"
         app:layout_constraintStart_toEndOf="@id/ability_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/ability_image"/>
 
 
