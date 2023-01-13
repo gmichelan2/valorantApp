@@ -1,9 +1,9 @@
 package com.example.valorantapp.core.repository
 
-import com.example.valorantapp.modules.Agent
-import com.example.valorantapp.modules.Buddy
-import com.example.valorantapp.modules.ValorantApiResponse
-import com.example.valorantapp.modules.Weapon
+import com.example.valorantapp.model.Agent
+import com.example.valorantapp.model.Buddy
+import com.example.valorantapp.model.ValorantApiResponse
+import com.example.valorantapp.model.Weapon
 
 interface ValorantRepositoryInterface {
     suspend fun getAgents(): ValorantApiResponse<List<Agent>>

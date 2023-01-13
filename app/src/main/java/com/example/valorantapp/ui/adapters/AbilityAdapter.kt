@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.valorantapp.databinding.AgentAbilityItemBinding
-import com.example.valorantapp.modules.Ability
+import com.example.valorantapp.model.Ability
 import com.example.valorantapp.tools.setHttpImage
 
 class AbilityAdapter(private val abilityList: List<Ability>) :

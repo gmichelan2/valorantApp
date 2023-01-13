@@ -7,7 +7,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valorantapp.R
 import com.example.valorantapp.databinding.AgentDetailFragmentBinding
-import com.example.valorantapp.modules.Agent
+import com.example.valorantapp.model.Agent
 import com.example.valorantapp.tools.setHttpImage
 import com.example.valorantapp.ui.adapters.AbilityAdapter
 

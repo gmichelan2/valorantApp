@@ -1,6 +1,6 @@
 package com.example.valorantapp.core.service
 
-import com.example.valorantapp.modules.*
+import com.example.valorantapp.model.*
 import retrofit2.http.GET
 import retrofit2.http.Query
 

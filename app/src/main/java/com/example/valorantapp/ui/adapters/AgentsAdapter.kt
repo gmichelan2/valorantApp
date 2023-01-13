@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.valorantapp.databinding.AgentsItemBinding
-import com.example.valorantapp.modules.Agent
+import com.example.valorantapp.model.Agent
 import com.example.valorantapp.tools.setHttpImage
 
 class AgentsAdapter(private var agentsList: List<Agent>,

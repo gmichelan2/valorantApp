@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.valorantapp.databinding.WeaponItemBinding
-import com.example.valorantapp.modules.Weapon
+import com.example.valorantapp.model.Weapon
 import com.example.valorantapp.tools.setHttpImage
 
 class WeaponsAdapter(

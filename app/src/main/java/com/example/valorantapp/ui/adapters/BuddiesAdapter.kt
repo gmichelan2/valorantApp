@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import com.example.valorantapp.databinding.BuddieItemBinding
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.valorantapp.modules.Buddy
+import com.example.valorantapp.model.Buddy
 import com.example.valorantapp.tools.setHttpImage
 
 class BuddiesAdapter(

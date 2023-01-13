@@ -22,7 +22,7 @@
         android:layout_marginHorizontal="@dimen/common_min_margin"
         app:layout_constraintStart_toEndOf="@id/ability_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ability_image"
+        app:layout_constraintTop_toTopOf="parent"
         />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/ability_description"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@id/ability_title"
         app:layout_constraintStart_toEndOf="@id/ability_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/ability_image"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
