@@ -24,6 +24,8 @@ class AgentsViewModel(private val valorantRepository: ValorantRepositoryInterfac
         viewModelScope.launch {
             _uiState.value = UIState(loading = true)
             _uiState.value = UIState(dataList = valorantRepository.getAgents())
+
+
         }
     }
 }
